@@ -3,7 +3,7 @@ package com.moyv.bbs_servlet.entity;
 public class Reply {
     private Integer replyId;
     private Integer remarkId;
-    private Integer replyAccount;
+    private String replyAccount;
     private String replyContent;
 
     public Integer getReplyId() {
@@ -22,11 +22,11 @@ public class Reply {
         this.remarkId = remarkId;
     }
 
-    public Integer getReplyAccount() {
+    public String getReplyAccount() {
         return replyAccount;
     }
 
-    public void setReplyAccount(Integer replyAccount) {
+    public void setReplyAccount(String replyAccount) {
         this.replyAccount = replyAccount;
     }
 

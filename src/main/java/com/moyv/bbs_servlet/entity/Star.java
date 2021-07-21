@@ -14,7 +14,7 @@ import java.sql.Timestamp;
 public class Star {
     private Integer starId;
     private Integer postId;
-    private Integer starAccount;
+    private String starAccount;
     private Timestamp starTime;
 
     public Integer getStarId() {
@@ -33,11 +33,11 @@ public class Star {
         this.postId = postId;
     }
 
-    public Integer getStarAccount() {
+    public String getStarAccount() {
         return starAccount;
     }
 
-    public void setStarAccount(Integer starAccount) {
+    public void setStarAccount(String starAccount) {
         this.starAccount = starAccount;
     }
 

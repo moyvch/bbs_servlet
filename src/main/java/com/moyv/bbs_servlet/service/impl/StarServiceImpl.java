@@ -6,6 +6,8 @@ import com.moyv.bbs_servlet.service.StarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA
  *
@@ -19,8 +21,8 @@ public class StarServiceImpl implements StarService {
     @Autowired
     private StarMapper starMapper;
 
-    @Override
-    public Star selectTest(Integer starId) {
-        return starMapper.selectById(1);
+
+    public List<Star> selectTest(Integer starId) {
+        return starMapper.selectByPostId(1);
     }
 }

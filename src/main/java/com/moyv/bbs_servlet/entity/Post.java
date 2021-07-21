@@ -14,7 +14,7 @@ public class Post {
     private Integer postId;
     private Integer postImages;
     private String postContent;
-    private Integer postAccount;
+    private String postAccount;
     private Timestamp postTime;
 
     public Integer getPostId() {
@@ -41,11 +41,11 @@ public class Post {
         this.postContent = postContent;
     }
 
-    public Integer getPostAccount() {
+    public String getPostAccount() {
         return postAccount;
     }
 
-    public void setPostAccount(Integer postAccount) {
+    public void setPostAccount(String postAccount) {
         this.postAccount = postAccount;
     }
 

@@ -2,6 +2,7 @@ package com.moyv.bbs_servlet.dao;
 
 import com.moyv.bbs_servlet.entity.Post;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -30,4 +31,10 @@ public interface PostMapper {
      */
     List<Post> selectAll();
 
+    /**
+     * 插入一条post，发布帖子用
+     * @param post
+     * @return
+     */
+    Integer insertPost(@Param("post") Post post);
 }

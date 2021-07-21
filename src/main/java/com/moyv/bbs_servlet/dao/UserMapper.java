@@ -5,5 +5,10 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface UserMapper {
-    User selectById(Integer userAccount);
+    /**
+     * 通过userAccount查询用户信息
+     * @param userAccount
+     * @return
+     */
+    User selectByAccount(String userAccount);
 }

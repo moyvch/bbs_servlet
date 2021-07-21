@@ -11,18 +11,28 @@ import java.sql.Timestamp;
  * Description:
  */
 public class User {
-    private Integer userAccount;
+    private Integer userId;
+    private String userAccount;
     private String userPassword;
     private String userName;
-    private String user_sex;
+    private String userSex;
     private String userSign;
     private Timestamp userLoginTime;
 
-    public Integer getUserAccount() {
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public String getUserAccount() {
         return userAccount;
     }
 
-    public void setUserAccount(Integer userAccount) {
+    public void setUserAccount(String userAccount) {
         this.userAccount = userAccount;
     }
 
@@ -42,12 +52,12 @@ public class User {
         this.userName = userName;
     }
 
-    public String getUser_sex() {
-        return user_sex;
+    public String getUserSex() {
+        return userSex;
     }
 
-    public void setUser_sex(String user_sex) {
-        this.user_sex = user_sex;
+    public void setUserSex(String userSex) {
+        this.userSex = userSex;
     }
 
     public String getUserSign() {
@@ -69,10 +79,11 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "userAccount=" + userAccount +
+                "userId=" + userId +
+                ", userAccount='" + userAccount + '\'' +
                 ", userPassword='" + userPassword + '\'' +
                 ", userName='" + userName + '\'' +
-                ", user_sex='" + user_sex + '\'' +
+                ", userSex='" + userSex + '\'' +
                 ", userSign='" + userSign + '\'' +
                 ", userLoginTime=" + userLoginTime +
                 '}';

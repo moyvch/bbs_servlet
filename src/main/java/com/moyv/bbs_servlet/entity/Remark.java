@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 public class Remark {
     private Integer remarkId;
     private Integer postId;
-    private Integer remarkAccount;
+    private String remarkAccount;
     private String remarkContent;
     private Timestamp remarkTime;
 
@@ -33,11 +33,11 @@ public class Remark {
         this.postId = postId;
     }
 
-    public Integer getRemarkAccount() {
+    public String getRemarkAccount() {
         return remarkAccount;
     }
 
-    public void setRemarkAccount(Integer remarkAccount) {
+    public void setRemarkAccount(String remarkAccount) {
         this.remarkAccount = remarkAccount;
     }
 
