@@ -10,4 +10,12 @@
     <select id="selectByRemarkId" resultMap="Reply">
         SELECT * FROM reply WHERE remark_id = #{remarkId}
     </select>
+
+    <insert id="insertReply" parameterType="com.moyv.bbs_servlet.entity.Reply">
+        INSERT INTO reply (remark_id, reply_account, reply_content, reply_time) VALUES(#{reply.remarkId}, #{reply.replyAccount}, #{reply.replyContent}, #{reply.replyTime})
+    </insert>
+
+    <delete id="delReply">
+        DELETE FROM reply WHERE reply_id = #{replyId}
+    </delete>
 </mapper>

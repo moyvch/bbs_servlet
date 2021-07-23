@@ -16,14 +16,14 @@ public interface PostMapper {
      * @param postId
      * @return
      */
-    Post selectById(Integer postId);
+    Post selectById(@Param("postId") Integer postId);
 
     /**
      * 通过account查询post
-     * @param account
+     * @param postAccount
      * @return
      */
-    List<Post> selectByAccount(Integer account);
+    List<Post> selectByAccount(@Param("postAccount") String postAccount);
 
     /**
      * 查询全部的post

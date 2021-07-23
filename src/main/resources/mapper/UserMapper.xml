@@ -11,4 +11,12 @@
     <select id="selectByAccount" resultMap="User">
         SELECT * FROM user WHERE user_account = #{userAccount}
     </select>
+
+    <insert id="insertUser" parameterType="com.moyv.bbs_servlet.entity.User">
+        INSERT INTO user(user_account, user_password, user_name, user_sex, user_sign, user_login_time) VALUES(#{user.userAccount}, #{user.userPassword}, #{user.userName}, #{user.userSex}, #{user.userSign}, #{user.userLoginTime})
+    </insert>
+
+    <update id="updateUser">
+        update user set user_name = #{user.userName}, user_sex = #{user.userSex}, user_sign = #{user.userSign} where user_account = #{user.userAccount}
+    </update>
 </mapper>

@@ -6,6 +6,9 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+/**
+ * @author 0
+ */
 @Mapper
 public interface ReplyMapper {
     /**
@@ -14,4 +17,18 @@ public interface ReplyMapper {
      * @return
      */
     List<Reply> selectByRemarkId(@Param("remarkId") Integer remarkId);
+
+    /**
+     * 添加一条回复信息
+     * @param reply
+     * @return
+     */
+    Integer insertReply(@Param("reply")Reply reply);
+
+    /**
+     * 删除指定replyId的回复
+     * @param replyId
+     * @return
+     */
+    Integer delReply(@Param("replyId") Integer replyId);
 }

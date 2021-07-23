@@ -13,4 +13,12 @@
     <select id="selectByPostId" resultMap="Remark">
         SELECT * FROM remark WHERE post_id = #{postId}
     </select>
+
+    <insert id="insertRemark" parameterType="com.moyv.bbs_servlet.entity.Remark">
+        INSERT INTO remark (post_id, remark_account, remark_content, remark_time) VALUES(#{remark.postId}, #{remark.remarkAccount}, #{remark.remarkContent}, #{remark.remarkTime})
+    </insert>
+
+    <delete id="delRemark">
+        DELETE FROM remark WHERE remark_id = #{remarkId}
+    </delete>
 </mapper>

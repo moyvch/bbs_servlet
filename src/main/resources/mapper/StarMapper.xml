@@ -12,4 +12,12 @@
     <select id="selectByAccount" resultMap="Star">
         SELECT * FROM star WHERE star_account = #{starAccount}
     </select>
+
+    <insert id="insertStar" parameterType="com.moyv.bbs_servlet.entity.Star">
+        INSERT INTO star (post_id, star_account, star_time) VALUES(#{star.postId}, #{star.starAccount}, #{star.starTime})
+    </insert>
+
+    <delete id="delStar">
+        DELETE FROM star WHERE star_id = #{starId}
+    </delete>
 </mapper>

@@ -1,10 +1,22 @@
 package com.moyv.bbs_servlet.entity;
 
+import java.sql.Timestamp;
+
 public class Reply {
     private Integer replyId;
     private Integer remarkId;
     private String replyAccount;
     private String replyContent;
+
+    public Timestamp getReplyTime() {
+        return replyTime;
+    }
+
+    public void setReplyTime(Timestamp replyTime) {
+        this.replyTime = replyTime;
+    }
+
+    private Timestamp replyTime;
 
     public Integer getReplyId() {
         return replyId;
@@ -43,8 +55,9 @@ public class Reply {
         return "Reply{" +
                 "replyId=" + replyId +
                 ", remarkId=" + remarkId +
-                ", replyAccount=" + replyAccount +
+                ", replyAccount='" + replyAccount + '\'' +
                 ", replyContent='" + replyContent + '\'' +
+                ", replyTime=" + replyTime +
                 '}';
     }
 }
